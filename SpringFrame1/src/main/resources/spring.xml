@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="alien" class="org.naveen.Alien" autowire="byType">
+        <property name="age" value="21"></property>
+<!--        <property name="com" ref="com2"></property>-->
+<!--        <constructor-arg type="int" value="21"/>-->
+<!--        <constructor-arg type="org.naveen.Laptop" ref="lap" />-->
+    </bean>
+
+    <bean id="com1" class="org.naveen.Laptop" primary="true">
+    </bean>
+
+    <bean class="org.naveen.Desktop" lazy-init="true">
+    </bean>
+
+</beans>
